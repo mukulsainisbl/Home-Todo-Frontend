@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Todos from "../pages/Todos";
 import Home from "../pages/Home";
-import Signup from "../pages/signup";
+import Signup from "../pages/Signup";
 import Login from "../pages/Login";
 import CreateTodo from "../pages/CreateTodo";
 import PrivateRoute from "./PrivateRoute";
