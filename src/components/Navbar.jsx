@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../Context/AuthContextProvider";
-
+import { Auth } from "../Context/ContextProvider";
 const Navbar = () => {
-  const { authDetail, logout } = useContext(AuthContext);
+  const { authDetail, Logout } = useContext(Auth);
   const navigate = useNavigate();
 
   const links = [
@@ -14,7 +13,7 @@ const Navbar = () => {
   ];
 
   function handleLogout() {
-    logout();
+    Logout();
     localStorage.removeItem("token");
     navigate("/");
   }
