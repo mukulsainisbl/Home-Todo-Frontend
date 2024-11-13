@@ -13,7 +13,7 @@ const Todos = () => {
     setLoading(true);
     setError(false); // Reset error before each fetch attempt
     try {
-      const res = await axios.get(`${import.meta.env.VITE_API_URL}todo/`, {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/todo`, {
         headers: {
           Authorization: localStorage.getItem("token"), // Add the token from localStorage
         },
