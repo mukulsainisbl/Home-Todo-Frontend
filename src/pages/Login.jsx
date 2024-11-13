@@ -32,10 +32,13 @@ const Login = () => {
       );
       if (res.status === 200) {
         localStorage.setItem("token", res.data.token);
+        Login(res.data.token); // Update context before navigating
         navigate("/todos");
+      } else {
+        setError("Unexpected error. Please try again.");
       }
-      Login(res.data.token);
     } catch (error) {
+      console.error("Login error:", error); // Log error for debugging
       setError("Login failed. Please check your email and password.");
     }
   };
